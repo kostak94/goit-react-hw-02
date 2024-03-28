@@ -35,13 +35,11 @@ function App() {
     setFeedback(initialState);
   };
 
-  const positivePercentageOfFeedbacks = () => {
-    return Math.round(
-      ((feedback.good + feedback.neutral) / totalFeedbacks) * 100
-    );
-  };
-
   const totalFeedbacks = feedback.good + feedback.neutral + feedback.bad;
+
+  const positivePercentageOfFeedbacks = Math.round(
+    (feedback.good / totalFeedbacks) * 100
+  );
 
   return (
     <>
@@ -59,7 +57,7 @@ function App() {
           positivePercentageOfFeedbacks={positivePercentageOfFeedbacks}
         />
       ) : (
-        <Notification />
+        <Notification message={"No feedback yet!"} />
       )}
     </>
   );

@@ -15,7 +15,7 @@ const Feedback = ({ options, totalValue, positivePercentageOfFeedbacks }) => {
           <p>Total: {totalValue}</p>
         </li>
         <li>
-          <p>Positive: {positivePercentageOfFeedbacks()}%</p>
+          <p>Positive: {positivePercentageOfFeedbacks}%</p>
         </li>
       </ul>
     </div>
